@@ -1,10 +1,2 @@
 node_modules
-.cursor
 .env
-.env.local
-.env.*.local
-dist
-.next
-uploads
-*.log
-.DS_Store
