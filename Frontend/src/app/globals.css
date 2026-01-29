@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #222a35;
+  --color-primary-hover: #1a2029;
+  --color-secondary: #97999b;
+  --color-light: #e9e4cc;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-light: var(--color-light);
+}
+
+/* DM Serif Display Font */
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('../shared/fonts/DMSerif/DMSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('../shared/fonts/DMSerif/DMSerifDisplay-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Futura BT Font */
+@font-face {
+  font-family: 'Futura BT';
+  src: url('../shared/fonts/Futura/futura-book-bt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura BT';
+  src: url('../shared/fonts/Futura/FUTURAL.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura BT';
+  src: url('../shared/fonts/Futura/FUTURAM.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura BT';
+  src: url('../shared/fonts/Futura/FUTURAB.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: var(--color-primary);
+  font-family: 'Futura BT', sans-serif;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Futura BT', sans-serif;
+}
+
+/* Loading animation for ticker */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 0.7;
+  }
+}
+
+/* Brief pulse for copy feedback */
+@keyframes copied-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-copied {
+  animation: copied-pulse 0.3s ease-out;
+}
